@@ -1,0 +1,161 @@
+#!/bin/bash
+usage()
+{
+	cat <<EOF
+Usage: $0 [options]
+
+Options:
+    -s       Show package name and version number.
+    -n       Show numerical version number only.
+    -l       List installed packages details (Default option).
+EOF
+}
+if [ "X$1" == "X-s" ]; then echo OFED-internal-24.01-0.3.3:; exit 0; fi
+if [ "X$1" == "X-n" ]; then echo 24.01-0.3.3; exit 0; fi
+if [ "X$1" != "X-l" ] && [ "X$1" != "X" ]; then usage; exit 1; fi
+
+cat << EOF
+OFED-internal-24.01-0.3.3:
+
+clusterkit:
+mlnx_ofed_clusterkit/clusterkit-1.12.449-1.src.rpm
+
+dpcp:
+/sw/release/sw_acceleration/dpcp/dpcp-1.1.46-1.src.rpm
+
+hcoll:
+mlnx_ofed_hcol/hcoll-4.8.3227-1.src.rpm
+
+ibarr:
+https://github.com/Mellanox/ip2gid master
+commit 44ac1948d0d604c723bc36ade0af02c54e7fc7d2
+ibdump:
+https://github.com/Mellanox/ibdump master
+commit d0a4f5aabf21580bee9ba956dfff755b1dd335c3
+ibsim:
+mlnx_ofed_ibsim/ibsim-0.12.tar.gz
+
+ibutils2:
+ibutils2/ibutils2-2.1.1-0.1.MLNX20240128.g605c7811.tar.gz
+
+iser:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/mlnx-ofa_kernel-4.0.git mlnx_ofed_24_01
+commit 480e4c34a835edfe0415642160c424b7e9d09fee
+
+isert:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/mlnx-ofa_kernel-4.0.git mlnx_ofed_24_01
+commit 480e4c34a835edfe0415642160c424b7e9d09fee
+
+kernel-mft:
+mlnx_ofed_mft/kernel-mft-4.27.0-83.src.rpm
+
+knem:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/knem.git mellanox-master
+commit 0984cf2a2de70db5c6e6fff375b070eece37c39e
+libvma:
+vma/source_rpms//libvma-9.8.51-1.src.rpm
+
+libxlio:
+/sw/release/sw_acceleration/xlio/libxlio-3.21.2-1.src.rpm
+
+mlnx-dpdk:
+https://github.com/Mellanox/dpdk.org mlnx_dpdk_22.11_last_stable
+commit 6e315c6a32e2b382665887deb8bd96882a0327ef
+mlnx-en:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/mlnx-ofa_kernel-4.0.git mlnx_ofed_24_01
+commit 480e4c34a835edfe0415642160c424b7e9d09fee
+
+mlnx-ethtool:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/ethtool.git mlnx_ofed_24_01
+commit 1ad54ff7f13f7d081945803e9547e879f825b6a4
+mlnx-iproute2:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/iproute2.git mlnx_ofed_24_01
+commit c76d3cd57a92e0ffb2183449282cf433a2dd6205
+mlnx-nfsrdma:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/mlnx-ofa_kernel-4.0.git mlnx_ofed_24_01
+commit 480e4c34a835edfe0415642160c424b7e9d09fee
+
+mlnx-nvme:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/mlnx-ofa_kernel-4.0.git mlnx_ofed_24_01
+commit 480e4c34a835edfe0415642160c424b7e9d09fee
+
+mlnx-ofa_kernel:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/mlnx-ofa_kernel-4.0.git mlnx_ofed_24_01
+commit 480e4c34a835edfe0415642160c424b7e9d09fee
+
+mlnx-tools:
+https://github.com/Mellanox/mlnx-tools mlnx_ofed
+commit 92b5e0b5db37dc407238f55158926e8a5a3e5006
+mlx-steering-dump:
+https://github.com/Mellanox/mlx_steering_dump mlnx_ofed_23_04
+commit fc616d9a8f62113b0da6fc5a8948b11177d8461e
+mpitests:
+mlnx_ofed_mpitest/mpitests-3.2.22-8f11314.src.rpm
+
+mstflint:
+mlnx_ofed_mstflint/mstflint-4.16.1-2.tar.gz
+
+multiperf:
+https://git-nbu.nvidia.com/r/a/Performance/multiperf rdma-core-support
+commit d3fad92dc6984e43cc5377ba0a3126808432ce2d
+ofed-docs:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/ofed-docs.git mlnx_ofed-4.0
+commit 3d1b0afb7bc190ae5f362223043f76b2b45971cc
+
+openmpi:
+mlnx_ofed_ompi_1.8/openmpi-4.1.7a1-1.src.rpm
+
+opensm:
+mlnx_ofed_opensm/opensm-5.18.0.MLNX20240128.3f266a48.tar.gz
+
+openvswitch:
+https://gitlab-master.nvidia.com/sdn/ovs doca_2_6
+commit e92ac078db9c15d836a0d2124ffce06dc39a1c7f
+perftest:
+mlnx_ofed_perftest/perftest-24.01.0-0.38.gd185c9b.tar.gz
+
+rdma-core:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/rdma-core.git mlnx_ofed_24_01
+commit c77bba30e179bbbda8459e8ca3f67b7f05ad0e50
+rshim:
+mlnx_ofed_soc/rshim-2.0.19-0.gbf7f1f2.src.rpm
+
+sharp:
+mlnx_ofed_sharp/sharp-3.6.0.MLNX20240128.e669b4e8.tar.gz
+
+sockperf:
+sockperf/sockperf-3.10-0.git5ebd327da983.src.rpm
+
+srp:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/mlnx-ofa_kernel-4.0.git mlnx_ofed_24_01
+commit 480e4c34a835edfe0415642160c424b7e9d09fee
+
+ucx:
+mlnx_ofed_ucx/ucx-1.16.0-1.src.rpm
+
+xpmem-lib:
+/sw/release/mlnx_ofed/IBHPC/OFED-internal-23.10-0.5.5/SRPMS/xpmem-lib-2.7-0.2310055.src.rpm
+
+xpmem:
+https://git-nbu.nvidia.com/r/a/mlnx_ofed/xpmem.git mellanox-master
+commit 1e704ce4d2043c5ac45502c934e27fc2e1f07c93
+EOF
+
+echo
+echo Installed Packages:
+echo -------------------
+
+pkglist1=
+pkglist2=
+
+if [ -x /usr/bin/dpkg ]; then
+    pkglist1=$(dpkg --list | grep -E "clusterkit|dpcp|hcoll|ibarr|ibdump|ibsim|ibsim-doc|ibutils2|iser-dkms|isert-dkms|kernel-mft-dkms|knem|knem-dkms|libvma|libvma-dev|libvma-dbg|libvma-utils|libxlio|libxlio-dev|libxlio-dbg|libxlio-utils|mlnx-dpdk|mlnx-dpdk-doc|mlnx-dpdk-dev|mlnx-en-utils|mlnx-en-dkms|mlnx-ethtool|mlnx-iproute2|mlnx-nfsrdma-dkms|mlnx-nvme-dkms|mlnx-ofed-kernel-utils|mlnx-ofed-kernel-dkms|mlnx-tools|mlx-steering-dump|mpitests|mstflint|openmpi|opensm|opensm-doc|libopensm|libopensm-devel|openvswitch-datapath-source|openvswitch-datapath-dkms|openvswitch-common|libopenvswitch|openvswitch-switch|openvswitch-pki|openvswitch-testcontroller|openvswitch-dbg|python3-openvswitch|openvswitch-test|openvswitch-vtep|libopenvswitch-dev|openvswitch-ipsec|perftest|rdma-core|ibacm|ibverbs-providers|ibverbs-utils|libibverbs-dev|libibverbs1|libibverbs1-dbg|libibumad-dev|libibumad3|libibumad3-dbg|librdmacm-dev|librdmacm1|librdmacm1-dbg|rdmacm-utils|srptools|python3-pyverbs|infiniband-diags|libibmad5|libibmad5-dbg|libibmad-dev|libibnetdisc5|libibnetdisc5-dbg|libibnetdisc-dev|rshim|sharp|sockperf|srp-dkms|ucx-dev|ucx|ucx-xpmem|ucx-cuda|ucx-gdrcopy")
+fi
+
+if (which rpm >/dev/null 2>&1); then
+    pkglist2=$(rpm -qa --queryformat "[%{NAME}]
+" | grep -E "kernel-ib|clusterkit|dpcp|hcoll|ibarr|ibdump|ibsim|ibutils2|^iser|kmod-iser|iser.*kmp|^isert|kmod-isert|isert.*kmp|kernel-mft|knem|libvma|libxlio|mlnx-dpdk|mlnx-en|mlnx-ethtool|mlnx-iproute2|mlnx-nfsrdma|mlnx-nvme|mlnx-ofa_kernel|mlnx-tools|mlx-steering-dump|mpitests|mstflint|multiperf|ofed-docs|openmpi|opensm|openvswitch|perftest|rdma-core|ibacm|libibcm|libibumad|libibverbs|librdmacm|srp_daemon|infiniband-diags|python3-pyverbs|rshim|sharp|sockperf|^srp$|kmod-srp|srp.*kmp|ucx|xpmem-lib|xpmem|neohost-backend|neohost-sdk")
+fi
+
+echo -e "$pkglist1"
+echo -e "$pkglist2"
