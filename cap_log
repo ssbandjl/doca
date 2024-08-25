@@ -1,0 +1,92 @@
+root@localhost:/opt/mellanox/doca/tools# lspci
+00:00.0 PCI bridge: Mellanox Technologies MT42822 BlueField-2 SoC Crypto disabled (rev 01)
+01:00.0 PCI bridge: Mellanox Technologies MT42822 Family [BlueField-2 SoC PCIe Bridge] (rev 01)
+02:00.0 PCI bridge: Mellanox Technologies MT42822 Family [BlueField-2 SoC PCIe Bridge] (rev 01)
+03:00.0 Ethernet controller: Mellanox Technologies MT42822 BlueField-2 integrated ConnectX-6 Dx network controller (rev 01)
+03:00.1 Ethernet controller: Mellanox Technologies MT42822 BlueField-2 integrated ConnectX-6 Dx network controller (rev 01)
+root@localhost:/opt/mellanox/doca/tools# /opt/mellanox/doca/tools/doca_caps -p 03:00.0 -b devemu_pci
+PCI: 0000:03:00.0
+    devemu_pci
+        max_hotplug_devices                           0
+        max_pci_types                                 0
+        type_log_min_bar_size                         0
+        type_log_max_bar_size                         0
+        type_max_num_msix                             0
+        type_max_num_db                               0
+        type_log_min_db_size                          0
+        type_log_max_db_size                          0
+        type_log_min_db_stride_size                   0
+        type_log_max_db_stride_size                   0
+        type_max_bars                                 0
+        bar_max_bar_regions                           0
+        type_max_bar_regions                          0
+        bar_db_region_identify_by_offset              unsupported
+        bar_db_region_identify_by_data                unsupported
+        bar_db_region_block_size                      0
+        bar_db_region_max_num_region_blocks           0
+        type_max_bar_db_regions                       0
+        bar_max_bar_db_regions                        0
+        bar_db_region_start_addr_alignment            0
+        bar_stateful_region_block_size                0
+        bar_stateful_region_max_num_region_blocks     0
+        type_max_bar_stateful_regions                 0
+        bar_max_bar_stateful_regions                  0
+        bar_stateful_region_start_addr_alignment      0
+        bar_msix_table_region_block_size              0
+        bar_msix_table_region_max_num_region_blocks   0
+        type_max_bar_msix_table_regions               0
+        bar_max_bar_msix_table_regions                0
+        bar_msix_table_region_start_addr_alignment    0
+        bar_msix_pba_region_block_size                0
+        bar_msix_pba_region_max_num_region_blocks     0
+        type_max_bar_msix_pba_regions                 0
+        bar_max_bar_msix_pba_regions                  0
+        bar_msix_pba_region_start_addr_alignment      0
+        bar_is_32_bit_supported                       unsupported
+        bar_is_1_mb_supported                         unsupported
+        bar_is_64_bit_supported                       unsupported
+        pci_type_hotplug                              unsupported
+        pci_type_mgmt                                 unsupported
+PCI: 0000:03:00.0
+    devemu_pci
+        max_hotplug_devices                           0
+        max_pci_types                                 0
+        type_log_min_bar_size                         0
+        type_log_max_bar_size                         0
+        type_max_num_msix                             0
+        type_max_num_db                               0
+        type_log_min_db_size                          0
+        type_log_max_db_size                          0
+        type_log_min_db_stride_size                   0
+        type_log_max_db_stride_size                   0
+        type_max_bars                                 0
+        bar_max_bar_regions                           0
+        type_max_bar_regions                          0
+        bar_db_region_identify_by_offset              unsupported
+        bar_db_region_identify_by_data                unsupported
+        bar_db_region_block_size                      0
+        bar_db_region_max_num_region_blocks           0
+        type_max_bar_db_regions                       0
+        bar_max_bar_db_regions                        0
+        bar_db_region_start_addr_alignment            0
+        bar_stateful_region_block_size                0
+        bar_stateful_region_max_num_region_blocks     0
+        type_max_bar_stateful_regions                 0
+        bar_max_bar_stateful_regions                  0
+        bar_stateful_region_start_addr_alignment      0
+        bar_msix_table_region_block_size              0
+        bar_msix_table_region_max_num_region_blocks   0
+        type_max_bar_msix_table_regions               0
+        bar_max_bar_msix_table_regions                0
+        bar_msix_table_region_start_addr_alignment    0
+        bar_msix_pba_region_block_size                0
+        bar_msix_pba_region_max_num_region_blocks     0
+        type_max_bar_msix_pba_regions                 0
+        bar_max_bar_msix_pba_regions                  0
+        bar_msix_pba_region_start_addr_alignment      0
+        bar_is_32_bit_supported                       unsupported
+        bar_is_1_mb_supported                         unsupported
+        bar_is_64_bit_supported                       unsupported
+        pci_type_hotplug                              unsupported
+        pci_type_mgmt                                 unsupported
+
